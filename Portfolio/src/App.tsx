@@ -6,8 +6,6 @@ import Home from './components/Home';
 import Login from './components/login';
 import AboutPage from './components/AboutPage';
 import MyCreations from './components/MyCreations';
-// import TicTacToe from './components/game/tictactoe';
-import Game from './components/game/game';
 
 function App() {
   return (
@@ -18,7 +16,6 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/creations" element={<MyCreations />} />
-          <Route path="/game" element={<Game />} />
           {/* Add more routes as needed */}
           <Route path="*" element={
             <div style={{ padding: '20px', textAlign: 'center' }}>
