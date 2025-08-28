@@ -34,7 +34,7 @@ const MyCreations = () => {
             >
 
 
-            <Typography style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '10vh', width: '100vw' }}>
+            <Typography style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '10vh', width: '100vw', marginTop: '10%' }}>
                     <Typography  style={{ width: '60%', height: '15vh', fontSize: '1.2rem', backgroundImage: 'url(/luffy.png)', backgroundPosition: 'center', backgroundSize: 'cover', borderRadius: '10px'}} onClick={handleClick}>
                         <div style={{ width: '50%', height: '100%', alignContent: 'center', paddingLeft: '40px', fontSize: '1.5rem'}}>
                             Blog: GCP App Engine - Deploying a project
