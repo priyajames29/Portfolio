@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout, Menu, type MenuProps } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 interface OutlineProps {
     children?: React.ReactNode;
@@ -20,21 +20,24 @@ const Outline: React.FC<OutlineProps> = ({ children }) => {
             // For external links, you'd use window.open or a regular <a> tag
             window.open('https://www.linkedin.com/in/priya-anna-james/', '_blank');
         } else if (e.key === 'creations') {
-            navigate('/creations'); // Navigate to the login page
-        }
+            navigate('/creations'); 
+        } else if (e.key === 'contact') {
+            navigate('/contact');
+        } 
     };
 
     const menuItems: MenuProps['items'] = [
         { key: 'home', label: 'Home' },
         { key: 'about', label: 'About' },
         { key: 'creations', label: 'Creations' },
-        { key: 'linkedin', label: 'LinkedIn' },
+        // { key: 'linkedin', label: 'LinkedIn' },
+        {key: 'contact', label: 'Contact'}
     ];
 
 
     return (
         <Layout>
-            <Content style={{ width: '100%', height: '95vh', display: 'flex', justifyContent: 'center', backgroundColor: 'rgb(233, 231, 231)', flexDirection: 'column', alignItems: 'center' }}>
+            <Content style={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', backgroundColor: 'rgb(233, 231, 231)', flexDirection: 'column', alignItems: 'center' }}>
                 <Menu
                     // theme="dark"
                     mode="horizontal"
@@ -62,9 +65,6 @@ const Outline: React.FC<OutlineProps> = ({ children }) => {
                 {children}
                 </div>
             </Content>
-            <Footer style={{ backgroundColor: 'rgb(233, 231, 231)', color: 'black', flex: '1' }}>
-                priyajames.mec@gmail.com
-            </Footer>
         </Layout>
     )
 }
