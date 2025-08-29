@@ -1,0 +1,24 @@
+.caption-text {
+    font-family: 'anton';
+    font-weight: 700;
+    font-size: 2rem;
+    font-style: 'normal';
+    font-weight: 700;
+}
+
+/* For smaller screens, you might want to cap the size */
+@media (min-width: 768px) {
+
+    .caption-text {
+        font-family: 'anton';
+        font-size: 10rem;
+    }
+}
+
+@media (min-width: 3000px) {
+
+    .caption-text {
+        font-size: 14rem;
+    }
+
+}

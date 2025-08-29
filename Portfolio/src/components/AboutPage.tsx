@@ -1,13 +1,14 @@
 import { Typography } from "antd"
 import Paragraph from "antd/es/typography/Paragraph"
 import Title from "antd/es/typography/Title"
+import './AboutPage.css'
 
 const AboutPage = () => {
     // const skills = ['React', 'Nodejs', 'Typescript', 'Express', 'Docker', 'Jest', 'GIT', 'UI Libraries']
     return (
         <Typography style={{display: 'flex', flexDirection: 'column', height: '100%', alignItems: 'center', width: '80%', marginTop: '7%'}}>
-            <Title style={{ color: 'rgb(161, 161, 161)', fontSize: '13rem', marginBottom: '30px' }}>About Me</Title>
-            <Paragraph style={{ color: 'Black', width: '70%', fontSize: '1.5rem', letterSpacing: '-0.04em', height: '30vh', alignContent: 'center', textAlign: 'center' }}>
+            <Title className="about">About Me</Title>
+            <Paragraph className="para" style={{ color: 'Black', width: '70%', letterSpacing: '-0.04em', height: '30vh', alignContent: 'center', textAlign: 'center' }}>
                 Hello! My name is Priya Anna James, and I am a passionate Full Stack Developer with over two years of experience creating scalable, user-centric web applications. 
                 My expertise lies in the MERN stack and modern web technologies, including React, Node.js, TypeScript, and Express.js. 
                 I am dedicated to delivering high-quality, reliable software. 

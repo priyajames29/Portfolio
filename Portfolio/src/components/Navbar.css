@@ -1,0 +1,27 @@
+.nav-text {
+  font-size: 4vw;
+  padding: "0px";
+}
+
+/* For smaller screens, you might want to cap the size */
+@media (min-width: 768px) {
+
+  /* Example breakpoint for larger screens */
+  .nav-text {
+    font-size: 20px;
+    /* Use a fixed size on larger screens */
+    font-family: 'Inter', 'sans-serif';
+  }
+
+
+}
+
+@media (min-width: 3000px) {
+
+  /* Example breakpoint for larger screens */
+  .nav-text {
+    font-size: 45px;
+    /* Use a fixed size on larger screens */
+  }
+
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, type MenuProps } from 'antd';
+import './Navbar.css'
 
 type NavbarProps = {
     onMenuClick: (key: string) => void;
@@ -33,6 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
                 width: '80%',
                 borderRadius: '15px'
             }}
+            // className='nav-text'
             items={menuItems}
             selectable={false}
             onClick={({ key }) => onMenuClick(key)}
