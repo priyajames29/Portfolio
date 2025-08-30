@@ -36,10 +36,10 @@ const ScrollLayout = () => {
                 <ParallaxLayer offset={1} style={{ display: 'flex', justifyContent: 'center' }}>
                     <AboutPage />
                 </ParallaxLayer>
-                <ParallaxLayer offset={2}>
+                <ParallaxLayer offset={2} style={{ display: 'flex', justifyContent: 'center' }}>
                     <MyCreations />
                 </ParallaxLayer>
-                <ParallaxLayer offset={3}>
+                <ParallaxLayer offset={3} style={{ display: 'flex', justifyContent: 'center' }}>
                     <Contacts />
                 </ParallaxLayer>
             </Parallax>

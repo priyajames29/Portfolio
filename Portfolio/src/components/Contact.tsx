@@ -2,7 +2,7 @@ import { Button, ConfigProvider, Typography } from "antd"
 import { Footer } from "antd/es/layout/layout";
 import Paragraph from "antd/es/typography/Paragraph";
 import TextType from "../Reactbits/TextType/TextType";
-
+import './Contact.css'
 
 const darkMetallicBlueTheme = {
     colorTextBase: 'black',
@@ -32,12 +32,9 @@ const Contacts = () => {
                 }
             }}
         >
-
-
-            <Typography style={{ backgroundColor: 'black', width: '100vw', height: '75vh', position: 'absolute', bottom: '0' }}>
-                <div style={{ paddingTop: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '8%' }}>
-                    <Paragraph style={{ color: 'white', textAlign: 'center', fontSize: '5rem', fontWeight: '800' }}>
-                        {/* Let's write the next line of code together! */}
+            <Typography className="contact-root">
+                <div className="contact-content">
+                    <Paragraph className="contact-title">
                         <TextType
                             text={["Let's write the next line of code together!", "Lets connect!", "Happy coding!"]}
                             typingSpeed={80}
@@ -46,17 +43,11 @@ const Contacts = () => {
                             cursorCharacter="|"
                         />
                     </Paragraph>
-                    <Button style={{ width: '10vw', height: '7vh', fontSize: '1.5rem' }} onClick={handleClick}>
+                    <Button className="contact-btn" onClick={handleClick}>
                         LinkedIn
                     </Button>
                 </div>
-                {/* <Button>
-                    Contact
-                </Button>
-                <Button>
-                    LinkedIn
-                </Button> */}
-                <Footer style={{ color: 'white', backgroundColor: 'black', position: 'fixed', bottom: '0', right: '0', fontSize: '1.2rem' }}>
+                <Footer className="contact-footer">
                     priyajames.mec@gmail.com
                 </Footer>
             </Typography>
