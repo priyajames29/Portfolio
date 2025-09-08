@@ -16,7 +16,7 @@ const Project: React.FC<ProjectProps> = ({ titleString, content, handleClick }) 
         <div className='content-style'>
             <div className="project-card-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%', borderRadius: '10px', padding: '20px', boxSizing: 'border-box' }}>
                 <Title level={2} className="project-title">{titleString}</Title>
-                <Paragraph  className="project-para" style={{width: "50%"}}>{content}</Paragraph>
+                <Paragraph  className="project-para" style={{width: "100%"}}>{content}</Paragraph>
                 <Button style={{ marginTop: '20px', padding: '10px 20px', fontSize: '1rem', borderRadius: '5px', backgroundColor: '#1890ff', color: 'white', border: 'none', cursor: 'pointer' }} onClick={handleClick}>
                     Read More
                 </Button>

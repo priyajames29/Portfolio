@@ -27,11 +27,11 @@ const Home = () => {
             }}
         >
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Typography style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '30px', paddingBottom: '0' }}>
+                <Typography style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '30px', paddingBottom: '0', textAlign: "center", justifyContent: 'center' }}>
                     <Title className="caption-text">
                         <BlurText text="PRIYA ANNA JAMES" animateBy="letters" delay={30} className="caption-text"/>
                     </Title>
-                    <Paragraph style={{fontSize: '1.5rem', width: '60%', textAlign: 'center', letterSpacing: '-0.04em', color: 'grey'}}>
+                    <Paragraph style={{fontSize: '1.5rem', width: '92%', textAlign: 'center', letterSpacing: '-0.04em', color: 'grey'}}>
                         A passionate Full Stack Developer with over three years of experience creating scalable, user-centric web applications using React and Node.js.
                     </Paragraph>
                 </Typography>

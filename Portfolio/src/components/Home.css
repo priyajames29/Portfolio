@@ -12,6 +12,7 @@
     .caption-text {
         font-family: 'anton';
         font-size: 10rem;
+        text-align: center;
     }
 }
 
@@ -19,6 +20,7 @@
 
     .caption-text {
         font-size: 14rem;
+        text-align: center; 
     }
 
 }
