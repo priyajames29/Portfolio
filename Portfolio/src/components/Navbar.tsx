@@ -1,45 +1,49 @@
-import React from 'react';
-import { Menu, type MenuProps } from 'antd';
-import './Navbar.css'
+import React from "react";
+import { Menu, Button } from "antd";
+import { CodeOutlined } from "@ant-design/icons";
+import type { MenuProps } from "antd";
+import "./Navbar.css";
 
 type NavbarProps = {
-    onMenuClick: (key: string) => void;
+  onMenuClick: (key: string) => void;
 };
 
 const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
+  const menuItems: MenuProps["items"] = [
+    { key: "home", label: "Home" },
+    { key: "about", label: "About" },
+    { key: "creations", label: "Creations" },
+    { key: "contact", label: "Contact" },
+  ];
 
-    const menuItems: MenuProps['items'] = [
-        { key: 'home', label: 'Home' },
-        { key: 'about', label: 'About' },
-        { key: 'creations', label: 'Creations' },
-        { key: 'contact', label: 'Contact' }
-    ];
+  return (
+    <div className="navbar-container">
+      <div className="navbar-logo">
+        <CodeOutlined />
+        <span>Priya.</span>
+      </div>
 
-    return (
+      <div className="navbar-right">
         <Menu
-            mode="horizontal"
-            style={{
-                boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.3)',
-                display: 'flex',
-                zIndex: 3,
-                paddingLeft: 0,
-                justifyContent: 'center',
-                opacity: 0.8,
-                color: 'black',
-                height: '60px',
-                marginTop: '10px',
-                fontSize: '20px',
-                fontWeight: 'bold',
-                alignItems: 'center',
-                width: '80%',
-                borderRadius: '15px'
-            }}
-            // className='nav-text'
-            items={menuItems}
-            selectable={false}
-            onClick={({ key }) => onMenuClick(key)}
+          mode="horizontal"
+          items={menuItems}
+          selectable={false}
+          className="navbar-menu"
+          onClick={({ key }) => onMenuClick(key)}
         />
-    )
-}
 
-export default Navbar
+        <Button
+          type="primary"
+          shape="round"
+          size="large"
+          className="hire-btn"
+          onClick={() => onMenuClick("contact")}
+        >
+          Let's Connect
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

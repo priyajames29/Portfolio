@@ -1,27 +1,79 @@
-.nav-text {
-  font-size: 4vw;
-  padding: "0px";
+.navbar-container {
+  width: 85%;
+  height: 72px;
+
+  margin: 20px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 32px;
+
+  background: white;
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 8px 30px rgba(68, 114, 215, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+
+  position: relative;
+  z-index: 10;
 }
 
-/* For smaller screens, you might want to cap the size */
-@media (min-width: 768px) {
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
-  /* Example breakpoint for larger screens */
-  .nav-text {
-    font-size: 20px;
-    /* Use a fixed size on larger screens */
-    font-family: 'Inter', 'sans-serif';
-  }
-
-
+  color: #4472d7;
+  font-size: 24px;
+  font-weight: 700;
 }
 
-@media (min-width: 3000px) {
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 50%;
+  justify-content: flex-end;
+}
 
-  /* Example breakpoint for larger screens */
-  .nav-text {
-    font-size: 45px;
-    /* Use a fixed size on larger screens */
-  }
+.navbar-menu {
+  border-bottom: none !important;
+  background: transparent !important;
+  width: 100%;
+  justify-content: end;
+}
 
+.navbar-menu .ant-menu-item {
+  font-size: 16px;
+  font-weight: 600;
+  color: #444 !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu .ant-menu-item:hover {
+  color: #4472d7 !important;
+}
+
+.navbar-menu .ant-menu-item::after {
+  display: none !important;
+}
+
+.hire-btn {
+  background: #4472d7 !important;
+  border: none !important;
+
+  padding-inline: 24px;
+
+  box-shadow: 0 8px 20px rgba(68, 114, 215, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.hire-btn:hover {
+  background: #5b86e5 !important;
+  transform: translateY(-2px);
 }
