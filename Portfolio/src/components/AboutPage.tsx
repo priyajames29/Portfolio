@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Typography, Space, Tag } from "antd";
+import "./AboutPage.css";
 
 const { Title, Paragraph } = Typography;
 
@@ -22,70 +23,25 @@ const companies = [
 
 const About: React.FC = () => {
   return (
-    <div
-      id="about"
-      style={{
-        maxWidth: "1200px",
-        margin: "120px auto",
-        padding: "0 24px",
-      }}
-    >
-      <Title
-        level={1}
-        style={{
-          textAlign: "center",
-          marginBottom: "70px",
-          fontWeight: 700,
-        }}
-      >
+    <section id="about" className="about-container">
+      <Title level={1} className="about-title">
         About Me
       </Title>
 
       <Row gutter={[48, 48]} align="middle">
         {/* Left */}
         <Col xs={24} md={10}>
-          <Title
-            level={3}
-            style={{
-              marginBottom: "32px",
-              textAlign: "center",
-            }}
-          >
+          <Title level={3} className="section-title">
             Where I've Worked
           </Title>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns:
-                "repeat(auto-fit, minmax(180px, max-content))",
-              justifyContent: "center",
-              gap: "20px",
-            }}
-          >
+          <div className="companies-grid">
             {companies.map((company) => (
-              <div
-                key={company.name}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: "180px",
-                  height: "100px",
-                  borderRadius: "20px",
-                  background: "#fff",
-                  border: "1px solid #f0f0f0",
-                  boxShadow: "0 8px 24px rgba(0,0,0,0.04)",
-                }}
-              >
+              <div key={company.name} className="company-card">
                 <img
                   src={company.logo}
                   alt={company.name}
-                  style={{
-                    maxWidth: "120px",
-                    maxHeight: "50px",
-                    objectFit: "contain",
-                  }}
+                  className="company-logo"
                 />
               </div>
             ))}
@@ -94,46 +50,23 @@ const About: React.FC = () => {
 
         {/* Right */}
         <Col xs={24} md={14}>
-          <Title
-            level={2}
-            style={{
-              marginBottom: 24,
-            }}
-          >
+          <Title level={2} className="heading">
             Building products with purpose.
           </Title>
 
-          <Paragraph
-            style={{
-              fontSize: "18px",
-              lineHeight: 1.9,
-              color: "#555",
-            }}
-          >
+          <Paragraph className="about-text">
             I'm a Full Stack Developer who enjoys building products that balance
             exceptional user experiences with robust engineering.
           </Paragraph>
 
-          <Paragraph
-            style={{
-              fontSize: "18px",
-              lineHeight: 1.9,
-              color: "#555",
-            }}
-          >
+          <Paragraph className="about-text">
             Over the past three years, I've worked on applications serving more
             than 300,000 users, contributing across the entire product
             lifecycle—from crafting responsive React interfaces to designing
             scalable backend services with Node.js and TypeScript.
           </Paragraph>
 
-          <Paragraph
-            style={{
-              fontSize: "18px",
-              lineHeight: 1.9,
-              color: "#555",
-            }}
-          >
+          <Paragraph className="about-text">
             My experience spans public-sector platforms, AI-powered
             applications, and mobility solutions. I enjoy solving complex
             problems, improving developer workflows through testing and
@@ -142,25 +75,14 @@ const About: React.FC = () => {
 
           <Space size={[12, 12]} wrap style={{ marginTop: 20 }}>
             {skills.map((skill) => (
-              <Tag
-                key={skill}
-                style={{
-                  padding: "8px 16px",
-                  borderRadius: "999px",
-                  border: "none",
-                  background: "#4472d715",
-                  color: "#4472d7",
-                  fontSize: "15px",
-                  fontWeight: 500,
-                }}
-              >
+              <Tag key={skill} className="skill-tag">
                 {skill}
               </Tag>
             ))}
           </Space>
         </Col>
       </Row>
-    </div>
+    </section>
   );
 };
 
