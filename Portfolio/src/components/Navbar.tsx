@@ -13,7 +13,6 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
     { key: "home", label: "Home" },
     { key: "about", label: "About" },
     { key: "creations", label: "Creations" },
-    { key: "contact", label: "Contact" },
   ];
 
   return (

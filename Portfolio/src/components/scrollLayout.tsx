@@ -5,7 +5,6 @@ import MyCreations from "./MyCreations";
 import Contacts from "./Contact";
 import Navbar from "./Navbar";
 import { useRef } from "react";
-import LandingPage from "./sample";
 
 const ScrollLayout = () => {
   const parallaxRef = useRef<any>(null);
@@ -38,7 +37,6 @@ const ScrollLayout = () => {
         style={{
           width: "100vw",
           height: "100vh",
-          //   backgroundColor: "rgb(233, 231, 231)",
         }}
       >
         <ParallaxLayer
@@ -46,7 +44,6 @@ const ScrollLayout = () => {
           style={{ display: "flex", justifyContent: "center" }}
         >
           <Home />
-          {/* <LandingPage /> */}
         </ParallaxLayer>
         <ParallaxLayer
           offset={1}

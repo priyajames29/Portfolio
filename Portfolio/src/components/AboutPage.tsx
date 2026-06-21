@@ -1,42 +1,167 @@
-import { Typography } from "antd"
-import Paragraph from "antd/es/typography/Paragraph"
-import Title from "antd/es/typography/Title"
-import './AboutPage.css'
+import React from "react";
+import { Row, Col, Typography, Space, Tag } from "antd";
 
-const AboutPage = () => {
-    // const skills = ['React', 'Nodejs', 'Typescript', 'Express', 'Docker', 'Jest', 'GIT', 'UI Libraries']
-    return (
-        <Typography style={{ display: 'flex', flexDirection: 'column', height: '100%', alignItems: 'center', width: '92%', marginTop: '7%' }}>
-            <Title className="about">About Me</Title>
-            <div className="about-content">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', width: '50%' }}>
-                    <img src="/myPic.jpg" alt="Priya Anna James" className="profile-image" />
-                </div>
-                <Paragraph className="para">
-                    {/* style={{ color: 'Black', width: '50%', letterSpacing: '-0.04em', height: '30vh', alignContent: 'center', textAlign: 'left' }} */}
-                    Hello! My name is Priya Anna James, and I am a passionate Full Stack Developer with over three years of experience creating scalable, user-centric web applications.
-                    My expertise lies in the MERN stack and modern web technologies, including React, Node.js, TypeScript, and Express.js.
-                    I am dedicated to delivering high-quality, reliable software.
-                    I enjoy tackling complex technical challenges and I am always eager to learn and grow, whether it's building a public-facing application or exploring new technologies like AI-powered APIs
-                </Paragraph>
-                {/* <div className="skills-container">
-                <Title level={3} className="skills-title">Skills</Title>
-                <ul className="skills-list">
-                    <li className="skill-item">React</li>
-                    <li className="skill-item">Node.js</li>
-                    <li className="skill-item">TypeScript</li>
-                    <li className="skill-item">Express.js</li>
-                    <li className="skill-item">Docker</li>
-                    <li className="skill-item">Jest</li>
-                    <li className="skill-item">Git</li>
-                    <li className="skill-item">UI Libraries (Ant Design, Material-UI)</li>
-                </ul>
-            </div> */}
+const { Title, Paragraph } = Typography;
 
-            </div>
+const skills = [
+  "React",
+  "TypeScript",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "PostgreSQL",
+  "Ant Design",
+];
 
-        </Typography>
-    )
-}
+const companies = [
+  {
+    name: "Company 1",
+    logo: "/twLogo.png",
+  },
+];
 
-export default AboutPage
+const About: React.FC = () => {
+  return (
+    <div
+      id="about"
+      style={{
+        maxWidth: "1200px",
+        margin: "120px auto",
+        padding: "0 24px",
+      }}
+    >
+      <Title
+        level={1}
+        style={{
+          textAlign: "center",
+          marginBottom: "70px",
+          fontWeight: 700,
+        }}
+      >
+        About Me
+      </Title>
+
+      <Row gutter={[48, 48]} align="middle">
+        {/* Left */}
+        <Col xs={24} md={10}>
+          <Title
+            level={3}
+            style={{
+              marginBottom: "32px",
+              textAlign: "center",
+            }}
+          >
+            Where I've Worked
+          </Title>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns:
+                "repeat(auto-fit, minmax(180px, max-content))",
+              justifyContent: "center",
+              gap: "20px",
+            }}
+          >
+            {companies.map((company) => (
+              <div
+                key={company.name}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "180px",
+                  height: "100px",
+                  borderRadius: "20px",
+                  background: "#fff",
+                  border: "1px solid #f0f0f0",
+                  boxShadow: "0 8px 24px rgba(0,0,0,0.04)",
+                }}
+              >
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  style={{
+                    maxWidth: "120px",
+                    maxHeight: "50px",
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        </Col>
+
+        {/* Right */}
+        <Col xs={24} md={14}>
+          <Title
+            level={2}
+            style={{
+              marginBottom: 24,
+            }}
+          >
+            Building products with purpose.
+          </Title>
+
+          <Paragraph
+            style={{
+              fontSize: "18px",
+              lineHeight: 1.9,
+              color: "#555",
+            }}
+          >
+            I'm a Full Stack Developer who enjoys building products that balance
+            exceptional user experiences with robust engineering.
+          </Paragraph>
+
+          <Paragraph
+            style={{
+              fontSize: "18px",
+              lineHeight: 1.9,
+              color: "#555",
+            }}
+          >
+            Over the past three years, I've worked on applications serving more
+            than 300,000 users, contributing across the entire product
+            lifecycle—from crafting responsive React interfaces to designing
+            scalable backend services with Node.js and TypeScript.
+          </Paragraph>
+
+          <Paragraph
+            style={{
+              fontSize: "18px",
+              lineHeight: 1.9,
+              color: "#555",
+            }}
+          >
+            My experience spans public-sector platforms, AI-powered
+            applications, and mobility solutions. I enjoy solving complex
+            problems, improving developer workflows through testing and
+            automation, and building software that creates meaningful impact.
+          </Paragraph>
+
+          <Space size={[12, 12]} wrap style={{ marginTop: 20 }}>
+            {skills.map((skill) => (
+              <Tag
+                key={skill}
+                style={{
+                  padding: "8px 16px",
+                  borderRadius: "999px",
+                  border: "none",
+                  background: "#4472d715",
+                  color: "#4472d7",
+                  fontSize: "15px",
+                  fontWeight: 500,
+                }}
+              >
+                {skill}
+              </Tag>
+            ))}
+          </Space>
+        </Col>
+      </Row>
+    </div>
+  );
+};
+
+export default About;
