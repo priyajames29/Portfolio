@@ -1,13 +1,8 @@
-// src/App.tsx
-import 'antd/dist/reset.css';
-import ScrollLayout from './components/scrollLayout';
+import "./styles.css";
+import Layout from "./components/Layout";
 
 function App() {
-  return (
-    <div>
-      <ScrollLayout />
-    </div>
-  );
+  return <Layout />;
 }
 
 export default App;
