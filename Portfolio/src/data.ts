@@ -8,10 +8,9 @@ export const profile = {
   role: "Software Engineer · Full-Stack",
   stack: "Node.js / TypeScript / React",
   bio: [
-    "Software Engineer with 4 years of experience designing and building scalable web applications with Node.js, TypeScript and React.",
-    "I build secure REST APIs, frontend applications and microservices, backed by automated testing, CI/CD pipelines and cloud-native deployment workflows.",
-    "Strong focus on software quality — unit and integration testing, performance optimization and clean architecture — and on collaborating across global engineering teams.",
-    "Based in Bengaluru, India.",
+    "Part engineer, part architect, part someone who really needs their code to pass CI before they can sleep.",
+    "4 years building scalable web apps with Node.js, TypeScript, and React — from secure APIs to microservices to frontends people actually enjoy using.",
+    "I obsess over clean architecture and good tests so things don't fall apart at 2am. Bengaluru-based, globally distributed team player.",
   ],
 };
 
