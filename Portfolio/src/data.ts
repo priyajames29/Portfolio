@@ -8,9 +8,10 @@ export const profile = {
   role: "Software Engineer · Full-Stack",
   stack: "Node.js / TypeScript / React",
   bio: [
-    "Part engineer, part architect, part someone who really needs their code to pass CI before they can sleep.",
-    "4 years building scalable web apps with Node.js, TypeScript, and React — from secure APIs to microservices to frontends people actually enjoy using.",
-    "I obsess over clean architecture and good tests so things don't fall apart at 2am. Bengaluru-based, globally distributed team player.",
+    "Hey, I’m Priya 👋 I build things for the web — mostly with Node.js, TypeScript, and React.",
+    "4 years in, and I still get way too excited about a clean PR. I care about APIs that actually behave,",
+    "tests that catch bugs before my users do, and code that doesn’t page me at 2am.",
+    " Based in Bengaluru, usually collaborating with people scattered across way too many time zones.",
   ],
 };
 
@@ -156,3 +157,137 @@ export const contact = [
   },
   { key: "location", value: "Bengaluru, India" },
 ];
+
+// ─── Portfolio v3 (bold dark design) ────────────────────────────────────────
+
+export const v3 = {
+  // Set to an image path in /public (e.g. "/banner.jpg") to replace the
+  // generated banner pattern.
+  banner: "" as string,
+  avatar: "/myPic.jpg",
+  email: "priyajames.mec@gmail.com",
+  phone: "+91 8301840790",
+  location: "Bengaluru, Karnataka",
+  status: "Open to senior roles",
+  intro:
+    "Full-stack engineer at Thoughtworks. Four years building and scaling web platforms in Node.js, TypeScript and React, from architecture through CI/CD, and tested at every level.",
+  ticker: [
+    "OPEN TO SENIOR ENGINEERING ROLES",
+    "NODE.JS",
+    "TYPESCRIPT",
+    "REACT",
+    "97% TEST COVERAGE",
+    "300K+ USERS SERVED",
+    "BENGALURU, IST",
+  ],
+  roles: [
+    "Full-Stack Engineer",
+    "Node.js + TypeScript",
+    "React, with opinions",
+    "Writes the tests too",
+  ],
+  stack: [
+    "Node.js", "TypeScript", "React", "Express", "GraphQL", "REST APIs",
+    "Sequelize", "PostgreSQL", "MySQL", "Vitest", "Jest", "Playwright", "TDD",
+    "Redux", "Tailwind CSS", "GCP", "Docker", "GitLab CI/CD", "Python",
+    "Claude Code", "GitHub Copilot",
+  ],
+  faq: [
+    {
+      q: "Frontend or backend?",
+      a: "Yes. Node.js and Express on the server, React and TypeScript in the browser, and the CI/CD pipeline in between. When the team is stretched, I cover whichever side needs it.",
+    },
+    {
+      q: "How big is big?",
+      a: "A public platform serving 300K+ active users, a digital health initiative reaching 70K+ students, and now an energy platform orchestrating billions of data points at national scale.",
+    },
+    {
+      q: "What are you working on now?",
+      a: "React on a 5-person team building energy software for grid management, billing and customer operations. I led an epic end to end over 5 sprints and shipped it on time.",
+    },
+    {
+      q: "Anything else?",
+      a: "GHC Scholar 2022 with AnitaB.org. B.Tech in Computer Science and Engineering from Govt. Model Engineering College, Kerala.",
+    },
+  ],
+  work: [
+    {
+      meta: "FRONTEND · DEC 2025 — NOW",
+      title: "Energy Software Platform",
+      big: "5 sprints",
+      bigLabel: "EPIC LED END TO END, ON TIME",
+      body: "React on a 5-person team, for a platform used at national scale for grid management, billing and customer operations. Requirements and demos through release, Node.js when needed, Playwright for end-to-end tests, and a seat on the support rotation.",
+      tags: "REACT · TYPESCRIPT · NODE.JS · PLAYWRIGHT",
+      theme: "dark",
+      rot: -2,
+    },
+    {
+      meta: "FULL STACK · 2024 — 2025",
+      title: "Government Fitness App",
+      big: "70K+",
+      bigLabel: "STUDENTS REACHED",
+      body: "Node.js backend and React UI for a public app tracking youth health metrics. Helm charts with DevOps cut microservice deployment time by 20%; an integration testing strategy reached 90% coverage.",
+      tags: "NODE.JS · REACT · HELM · INTEGRATION TESTING",
+      theme: "accent",
+      rot: 2,
+    },
+    {
+      meta: "FRONTEND · 2023",
+      title: "AI-Powered Legal QA Bot",
+      big: "4 wks",
+      bigLabel: "TO MVP",
+      body: "OpenNyai Mission. Led React frontend development and integrated OpenAI APIs with backend services, cutting user correction time by 25%.",
+      tags: "REACT · OPENAI APIS",
+      theme: "light",
+      rot: -1.5,
+    },
+    {
+      meta: "FULL STACK · 2022 — 2023",
+      title: "Open-Source Mobility Middleware",
+      big: "Day 1",
+      bigLabel: "UNIT TESTS FROM THE FIRST RELEASE",
+      body: "Greenfield mobility platform. Backend services and frontend apps, with REST APIs compliant with the ONDC Beckn Protocol for secure, standardized partner communication.",
+      tags: "NODE.JS · EXPRESS · REACT · TYPESCRIPT · BECKN",
+      theme: "dark2",
+      rot: 1.5,
+    },
+  ] as {
+    meta: string;
+    title: string;
+    big: string;
+    bigLabel: string;
+    body: string;
+    tags: string;
+    theme: "dark" | "dark2" | "accent" | "light";
+    rot: number;
+  }[],
+  writing: [
+    {
+      title: "GCP App Engine: Deploy a Project",
+      blurb:
+        "A walkthrough of deploying apps on Google Cloud App Engine and the workflow around it.",
+      meta: "MEDIUM · GCP · DEVOPS",
+      href: "https://medium.com/@priyajames29/gcp-app-engine-deploy-a-project-34d2a194f300",
+      image: "/blogBG.png",
+    },
+  ],
+  timeline: [
+    {
+      title: "Full Stack Developer",
+      org: "Thoughtworks · Bengaluru",
+      period: "Sep 2022 — Present",
+      current: true,
+      body: "Scalable full-stack applications with Node.js, TypeScript, React and REST APIs for large public-sector and enterprise platforms. Reusable backend APIs and responsive frontend components cut feature delivery time by 20%. Raised automated test coverage from 85% to 97% with Vitest, unit and integration testing, refactoring and pair programming. Client engagements: energy software, government fitness, legal AI, open mobility.",
+    },
+    {
+      title: "B.Tech, Computer Science",
+      org: "Govt. Model Engineering College, APJ Abdul Kalam Technological University",
+      period: "Jun 2018 — Jun 2022",
+    },
+    {
+      title: "Grace Hopper Celebration (GHC) Scholarship",
+      org: "AnitaB.org",
+      period: "2022",
+    },
+  ] as { title: string; org: string; period: string; current?: boolean; body?: string }[],
+};
