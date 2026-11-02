@@ -164,7 +164,7 @@ export const v3 = {
   // Set to an image path in /public (e.g. "/banner.jpg") to replace the
   // generated banner pattern.
   banner: "" as string,
-  avatar: "/myPic.jpg",
+  avatar: "/avatar.png",
   email: "priyajames.mec@gmail.com",
   phone: "+91 8301840790",
   location: "Bengaluru, Karnataka",
