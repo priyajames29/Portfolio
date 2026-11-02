@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { links, profile, v3 } from "../data";
 import "../v3.css";
 
@@ -12,15 +12,15 @@ const SECTIONS = [
 ];
 
 // 9×7 pixel cat, "X" = filled
-const CAT = [
-  "X.....X..",
-  "XX...XX..",
-  "XXXXXXX..",
-  "X.XXX.X.X",
-  "XXXXXXX.X",
-  ".XXXXXXX.",
-  ".X.X.X.X.",
-];
+// const CAT = [
+//   "X.....X..",
+//   "XX...XX..",
+//   "XXXXXXX..",
+//   "X.XXX.X.X",
+//   "XXXXXXX.X",
+//   ".XXXXXXX.",
+//   ".X.X.X.X.",
+// ];
 
 const reducedMotion = () =>
   typeof window !== "undefined" &&
