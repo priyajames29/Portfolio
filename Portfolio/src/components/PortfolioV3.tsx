@@ -60,49 +60,49 @@ function scrollToId(id: string) {
 }
 
 /** Pixel cat that lazily follows the cursor. Mutates style directly — no re-renders. */
-function Cat() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const s = { mx: 200, my: 300, cx: 200, cy: 300, face: 1 };
-    const onMove = (e: MouseEvent) => {
-      s.mx = e.clientX;
-      s.my = e.clientY;
-    };
-    let raf = 0;
-    const tick = () => {
-      const dx = s.mx - 30 - s.cx;
-      const dy = s.my - 34 - s.cy;
-      if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
-        s.cx += dx * 0.06;
-        s.cy += dy * 0.06;
-        s.face = dx < -2 ? -1 : dx > 2 ? 1 : s.face;
-        if (ref.current) {
-          ref.current.style.transform = `translate(${s.cx}px, ${s.cy}px) scaleX(${s.face})`;
-        }
-      }
-      raf = requestAnimationFrame(tick);
-    };
-    window.addEventListener("mousemove", onMove);
-    raf = requestAnimationFrame(tick);
-    return () => {
-      window.removeEventListener("mousemove", onMove);
-      cancelAnimationFrame(raf);
-    };
-  }, []);
+// function Cat() {
+//   const ref = useRef<HTMLDivElement>(null);
+//   useEffect(() => {
+//     const s = { mx: 200, my: 300, cx: 200, cy: 300, face: 1 };
+//     const onMove = (e: MouseEvent) => {
+//       s.mx = e.clientX;
+//       s.my = e.clientY;
+//     };
+//     let raf = 0;
+//     const tick = () => {
+//       const dx = s.mx - 30 - s.cx;
+//       const dy = s.my - 34 - s.cy;
+//       if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+//         s.cx += dx * 0.06;
+//         s.cy += dy * 0.06;
+//         s.face = dx < -2 ? -1 : dx > 2 ? 1 : s.face;
+//         if (ref.current) {
+//           ref.current.style.transform = `translate(${s.cx}px, ${s.cy}px) scaleX(${s.face})`;
+//         }
+//       }
+//       raf = requestAnimationFrame(tick);
+//     };
+//     window.addEventListener("mousemove", onMove);
+//     raf = requestAnimationFrame(tick);
+//     return () => {
+//       window.removeEventListener("mousemove", onMove);
+//       cancelAnimationFrame(raf);
+//     };
+//   }, []);
 
-  return (
-    <div ref={ref} className="v3-cat" aria-hidden="true">
-      {CAT.join("")
-        .split("")
-        .map((ch, i) => (
-          <span
-            key={i}
-            style={{ background: ch === "X" ? "var(--fg)" : "transparent" }}
-          />
-        ))}
-    </div>
-  );
-}
+//   return (
+//     <div ref={ref} className="v3-cat" aria-hidden="true">
+//       {CAT.join("")
+//         .split("")
+//         .map((ch, i) => (
+//           <span
+//             key={i}
+//             style={{ background: ch === "X" ? "var(--fg)" : "transparent" }}
+//           />
+//         ))}
+//     </div>
+//   );
+// }
 
 function Marquee({
   children,

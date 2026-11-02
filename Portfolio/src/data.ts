@@ -176,8 +176,6 @@ export const v3 = {
     "NODE.JS",
     "TYPESCRIPT",
     "REACT",
-    "97% TEST COVERAGE",
-    "300K+ USERS SERVED",
     "BENGALURU, IST",
   ],
   roles: [
