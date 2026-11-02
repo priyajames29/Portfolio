@@ -235,7 +235,13 @@ export default function PortfolioV3() {
               rel="noreferrer"
             >
               <div className="v3-post__img">
-                <img src={p.image} alt="" loading="lazy" />
+                {p.image ? (
+                  <img src={p.image} alt="" loading="lazy" />
+                ) : (
+                  <div className="v3-post__cover" aria-hidden="true">
+                    {p.cover}
+                  </div>
+                )}
               </div>
               <div className="v3-post__text">
                 <div className="v3-card__meta">{p.meta}</div>

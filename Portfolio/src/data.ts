@@ -268,7 +268,23 @@ export const v3 = {
       href: "https://medium.com/@priyajames29/gcp-app-engine-deploy-a-project-34d2a194f300",
       image: "/blogBG.png",
     },
-  ],
+    {
+      title: "A Beginner's Guide to Git and GitHub",
+      blurb:
+        "The essentials of version control, from your first commit to pushing and collaborating on GitHub.",
+      meta: "MEDIUM · GIT · GITHUB",
+      href: "https://medium.com/@priyajames29/a-beginners-guide-to-git-and-github-facca7868a78",
+      // No image: shows a text cover instead
+      cover: "git",
+    },
+  ] as {
+    title: string;
+    blurb: string;
+    meta: string;
+    href: string;
+    image?: string;
+    cover?: string;
+  }[],
   timeline: [
     {
       title: "Full Stack Developer",
